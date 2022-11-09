@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assigment_cc_week6/views/congratulation.dart';
 import 'package:flutter_assigment_cc_week6/views/page.dart';
 
 void main() {

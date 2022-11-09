@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 
                 <data android:scheme="https"
-                    android:host="www.aflcloudcomp.com"
+                    android:host="relie.bryanmembosankan.my.id"
                     android:pathPrefix="/mahasiswa" />
             </intent-filter>            
         </activity>
