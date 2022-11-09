@@ -2,6 +2,8 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_assigment_cc_week6/services/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyWidget extends StatefulWidget {
   const MyWidget({super.key});
@@ -53,7 +55,18 @@ class _MyWidgetState extends State<MyWidget> {
                   },
                 ),
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await EmailService.sendMail(ctrlEmail.text.toString())
+                        .then((value) {
+                      Fluttertoast.showToast(
+                          msg: "Verification Email has been send",
+                          toastLength: Toast.LENGTH_SHORT,
+                          gravity: ToastGravity.CENTER,
+                          backgroundColor: Colors.red,
+                          textColor: Colors.white,
+                          fontSize: 16.0);
+                    });
+                  },
                   backgroundColor: Colors.blue,
                   child: const Icon(Icons.send),
                 )

@@ -7,5 +7,5 @@ class Const {
 }
 
 class Const_Email {
-  static String baseUrl = 'bryanmembosankan.my.id';
+  static String baseUrl = 'relie.bryanmembosankan.my.id';
 }
